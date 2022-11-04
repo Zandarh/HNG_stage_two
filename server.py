@@ -20,7 +20,7 @@ def post():
     operations = operation_string.split()
     for operation_type in operations:
         # checking for the operator to use
-        if operation_type == "minus" or operation_type == "substract" or operation_type == "substraction":
+        if operation_type == "minus" or operation_type == "subtract" or operation_type == "subtraction":
             the_operation = operation_type
             result = x - y
         if operation_type == "add" or operation_type == "addition":
