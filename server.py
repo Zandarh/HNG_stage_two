@@ -1,9 +1,12 @@
 from flask import Flask, request
+from flask_cors import CORS
 
 app = Flask(__name__)
+CORS(app, resources={r"/*": {"origins": "*"}})
 
 @app.route("/", methods=["POST"])
 def post():
+
     # Unpacking the data posted to the API
     reqJson = request.get_json()
     operation_string = reqJson['operation_type']
